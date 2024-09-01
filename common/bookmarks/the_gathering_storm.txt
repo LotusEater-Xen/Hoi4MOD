@@ -207,17 +207,7 @@ bookmarks = {
 				POL_the_between_the_seas_concept
 			}
 		}
-		"OMA"={
-			minor = yes
-			history = "OMA_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				
-			}
-			focuses = {
-				
-			}
-		}
+	
 		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
