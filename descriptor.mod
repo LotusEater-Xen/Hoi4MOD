@@ -3,5 +3,5 @@ tags={
 	"Alternative History"
 	"Ideologies"
 }
-name="Oman"
+name="Germany"
 supported_version="1.12.14"
