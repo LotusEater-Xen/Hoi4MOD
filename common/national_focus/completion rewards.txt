@@ -1,0 +1,7 @@
+add_doctrine_cost_reduction = {
+				name = AST_additional_militia_training
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+}
+army_experience = 25

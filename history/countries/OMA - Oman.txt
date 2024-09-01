@@ -1,0 +1,209 @@
+﻿capital = 294
+
+oob = "OMA_1936"
+
+# Starting tech
+if ={
+limit = {
+has_dlc ="No Step Back"}
+set_technology = {
+        gwtank_chassis = 1
+        basic_light_tank_chassis = 1
+	improved_light_tank_chassis = 1}
+}
+if ={
+limit = {
+NOT ={
+has_dlc ="No Step Back"}
+}
+set_technology = {
+      
+        basic_light_tank = 1
+	improved_light_tank = 1}
+}
+set_technology = {
+   
+        #INFANTRY
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+        tech_trucks = 1
+        motorised_infantry = 1
+
+        #SUPPORT
+        basic_train = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	
+        #ARTILLERY
+	gw_artillery = 1
+	interwar_antiair = 1
+
+        #INDUSTRY
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
+        
+        #ELECTRONICS
+        electronic_mechanical_engineering = 1
+        radio = 1
+ 
+        #DOCTRINES
+        mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+
+        	
+}
+
+
+add_ideas = {
+	extensive_conscription
+
+	
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		transport = 1
+	}}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		improved_ship_torpedo_launcher = 1
+	}}
+
+set_convoys = 20
+set_stability = 0.45
+set_war_support = 0.7
+
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	add_command_power = 100
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = construction_effort_2
+	complete_national_focus = production_effort_2
+	complete_national_focus = infrastructure_effort
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	oob = "OMA_1939"
+	set_technology = {
+		support_weapons = 1
+		gw_artillery = 1
+		
+		#doctrines
+		air_superiority = 1
+		
+		mass_assault = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1934.1.10"
+	election_frequency = 0
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 100
+}
+
+
+
+1939.1.1 = {
+	add_ideas = {
+		service_by_requirement
+	}
+
+	
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+create_equipment_variant = {
+		name = "Panzer II Ausf. w"
+		type = light_tank_chassis_2
+		design_team = mio:GER_daimler_benz_organization
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+                        special_type_slot_2 = expanded_fuel_tank
+                        special_type_slot_3 = smoke_launchers	
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 3
+		}
+		icon = "GFX_GER_improved_light_tank_medium"
+}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+name = "Type II"
+		type = ship_hull_submarine_1
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		
+	}
+}
+create_country_leader = {
+	name = "Lenz (Das Chaos) Schmidt"
+	desc = "LenzHis"
+	picture = "Lenz_(Das_Chaos)_ Schmidt.dds"
+	ideology = nazism
+	traits = {
+		
+	}
+}
+
+
